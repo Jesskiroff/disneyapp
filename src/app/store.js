@@ -7,7 +7,5 @@ export default configureStore({
     //user: userReducer,
     movie: movieReducer,
   },
-  middleware: getDefaultMiddleware({
-    serializableCheck: false,
-  }),
-});
+  //middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+  })
