@@ -40,7 +40,7 @@ const Viewers = (props) => {
   );
 };
 
-const Container = styled.div'
+const Container = styled.div`
   margin-top: 30px;
   padding: 30px 0px 26px;
   display: grid;
@@ -53,7 +53,7 @@ const Container = styled.div'
   }
 `;
 
-const Wrap = styled.div'
+const Wrap = styled.div`
   padding-top: 56.25%;
   border-radius: 10px;
   box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
