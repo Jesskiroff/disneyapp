@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import "./App.css";
 import Home from "./components/Home";
 import Chatbot from "./components/Chatbot";
+import Detail from "./components/Detail";
 
 function App() {
   return (
@@ -16,9 +17,6 @@ function App() {
           </Route>
           <Route path="/home">
             <Home />
-          </Route>
-          <Route path="/chatbot">
-            <Chatbot />
           </Route>
         </Switch>
       </Router>
