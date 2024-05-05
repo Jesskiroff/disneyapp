@@ -4,21 +4,42 @@ import { useSelector } from "react-redux";
 import { selectTrending } from "../features/movie/movieSlice";
 
 const Trending = (props) => {
-  const movies = useSelector(selectTrending);
-
   return (
     <Container>
       <h4>Trending</h4>
       <Content>
-        {movies &&
-          movies.map((movie, key) => (
-            <Wrap key={key}>
-              {movie.id}
-              <Link to={`/detail/` + movie.id}>
-                <img src={movie.cardImg} alt={movie.title} />
-              </Link>
-            </Wrap>
-          ))}
+        <Wrap>
+          <Link to="/">
+            <img
+              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
+              alt=""
+            />
+          </Link>
+        </Wrap>
+        <Wrap>
+          <Link to="/">
+            <img
+              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
+              alt=""
+            />
+          </Link>
+        </Wrap>
+        <Wrap>
+          <Link to="/">
+            <img
+              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
+              alt=""
+            />
+          </Link>
+        </Wrap>
+        <Wrap>
+          <Link to="/">
+            <img
+              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
+              alt=""
+            />
+          </Link>
+        </Wrap>
       </Content>
     </Container>
   );

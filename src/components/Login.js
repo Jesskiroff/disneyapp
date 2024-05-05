@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Login = (props) => {
   return (
@@ -9,12 +10,14 @@ const Login = (props) => {
           <SignUp>GET ALL THERE</SignUp>
           <Description>
             Get Premier Access to Raya and the Last Dragon for an additional fee
-            with a Disney+ subscription. As of 03/26/21, the price of Disney+
-            and The Disney Bundle will increase by $1.
+            with a Disney+ subscription.
           </Description>
           <CTALogoTwo src="/images/cta-logo-two.png" alt="" />
         </CTA>
         <BgImage />
+        <FloatingButtonContainer>
+          <StyledLink to="/chatbot">Chat with us</StyledLink>
+        </FloatingButtonContainer>
       </Content>
     </Container>
   );
@@ -26,11 +29,12 @@ const Container = styled.section`
   flex-direction: column;
   text-align: center;
   height: 100vh;
+  position: relative;
 `;
 
 const Content = styled.div`
   margin-bottom: 10vw;
-  width 100%;
+  width: 100%;
   position: relative;
   min-height: 100vh;
   box-sizing: border-box;
@@ -101,6 +105,32 @@ const CTALogoTwo = styled.img`
   display: inline-block;
   vertical-align: bottom;
   width: 100%;
+`;
+
+const StyledLink = styled(Link)`
+  font-weight: bold;
+  color: #fff;
+  background-color: #007bff;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 16px 24px;
+  border-radius: 50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background-color 0.3s;
+
+  &:hover {
+    background-color: #0056b3;
+  }
+`;
+
+const FloatingButtonContainer = styled.div`
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
 `;
 
 export default Login;

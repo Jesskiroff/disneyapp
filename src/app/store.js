@@ -8,4 +8,4 @@ export default configureStore({
     movie: movieReducer,
   },
   //middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
-  })
+});
