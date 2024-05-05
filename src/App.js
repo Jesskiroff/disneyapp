@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import "./App.css";
 import Home from "./components/Home";
 import Chatbot from "./components/Chatbot";
+import Detail from "./components/Detail";
 
 function App() {
   return (
