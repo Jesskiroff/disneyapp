@@ -18,6 +18,9 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
+          <Route path="/chatbot">
+            <Chatbot />
+          </Route>
         </Switch>
       </Router>
     </div>
