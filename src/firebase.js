@@ -2,7 +2,7 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/firestore";
 
-import { initializeApp } from "firebase/app";
+// import { initializeApp } from "firebase/app";
 const firebaseConfig = {
     apiKey: "AIzaSyAoU8xrAQqWj558fWZwDngkE9Z2AP9oUHY",
     authDomain: "disneyapp-ac50c.firebaseapp.com",
@@ -20,6 +20,7 @@ const firebaseConfig = {
   const provider = new firebase.auth.GoogleAuthProvider();
   //const storage= firebase.storage();
 
-  export {db, auth, provider};
+  export { auth, provider };
+export default db;
  
   
