@@ -1,67 +1,26 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
-// import { selectRecommend } from "../features/movie/movieSlice";
+import { selectRecommend } from "../features/movie/movieSlice";
 
 const Recommends = (props) => {
-  return (
-    <Container>
-      <h4>Recommended for You</h4>
-      <Content>
-        <Wrap>
-          <Link to="/">
-            <img
-              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
-              alt=""
-            />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to="/">
-            <img
-              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
-              alt=""
-            />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to="/">
-            <img
-              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
-              alt=""
-            />
-          </Link>
-        </Wrap>
-        <Wrap>
-          <Link to="/">
-            <img
-              src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/71D40BAF2BD52323521A3CDA28F05F68890D569684232D6607597B7C2502DCA6/scale?width=1600&aspectRatio=1.78&format=webp"
-              alt=""
-            />
-          </Link>
-        </Wrap>
-      </Content>
-    </Container>
-  );
-  // const movies = useSelector(selectRecommend);
-  // console.log(movies, ":🛢️");
-
-  // return (
-  //   <Container>
-  //     <h4>Recommended for You</h4>
-  //     <Content>
-  //       {movies &&
-  //         movies.map((movie, key) => (
-  //           <Wrap key={key}>
-  //             {movie.id}
-  //             <Link to={`/detail/` + movie.id}>
-  //               <img src={movie.cardImg} alt={movie.title} />
-  //             </Link>
-  //           </Wrap>
-  //         ))}
-  //     </Content>
-  //   </Container>
-  // );
+   const movies = useSelector(selectRecommend);
+   console.log(movies, ":🛢️");
+return (
+   <Container>
+       <h4>Recommended for You</h4>
+       <Content>
+        {movies && movies.map((movie, key) => (
+            <Wrap key={key}>
+              {movie.id}
+              <Link to={`/detail/` + movie.id}>
+                <img src={movie.cardImg} alt={movie.title} />
+              </Link>
+            </Wrap>
+          ))}
+       </Content>
+     </Container>
+   );
 };
 
 const Container = styled.div`

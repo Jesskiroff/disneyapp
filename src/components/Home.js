@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
-import NewDisney from "./NewDisney";
+import NewDisney from "../features/movie/NewDisney";
 import Originals from "./Originals";
 import Recommends from "./Recommends";
 import Trending from "./Trending";
@@ -27,6 +27,8 @@ const Home = (props) => {
   //       switch (doc.data().type) {
   //         case "recommend":
   //           recommends = [...recommends, { id: doc.id, ...doc.data() }];
+  //            recommends = [...recommends, { id: doc.id, ...doc.data() }];
+
   //           break;
 
   //         case "new":
