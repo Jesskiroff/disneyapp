@@ -4,13 +4,15 @@ import { useSelector } from "react-redux";
 import { selectRecommend } from "../features/movie/movieSlice";
 
 const Recommends = (props) => {
-   const movies = useSelector(selectRecommend);
-   console.log(movies, ":🛢️");
-return (
-   <Container>
-       <h4>Recommended for You</h4>
-       <Content>
-        {movies && movies.map((movie, key) => (
+  const movies = useSelector(selectRecommend);
+  console.log(movies, ":🛢️");
+
+  return (
+    <Container>
+      <h4>Recommended for You</h4>
+      <Content>
+        {movies &&
+          movies.map((movie, key) => (
             <Wrap key={key}>
               {movie.id}
               <Link to={`/detail/` + movie.id}>
@@ -18,9 +20,9 @@ return (
               </Link>
             </Wrap>
           ))}
-       </Content>
-     </Container>
-   );
+      </Content>
+    </Container>
+  );
 };
 
 const Container = styled.div`

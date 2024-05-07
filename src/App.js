@@ -3,7 +3,6 @@ import Login from "./components/Login";
 import Header from "./components/Header";
 import "./App.css";
 import Home from "./components/Home";
-import Chatbot from "./components/Chatbot";
 import Detail from "./components/Detail";
 
 function App() {
@@ -18,8 +17,8 @@ function App() {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/chatbot">
-            <Chatbot />
+          <Route path="/detail/:id">
+            <Detail />
           </Route>
         </Switch>
       </Router>
